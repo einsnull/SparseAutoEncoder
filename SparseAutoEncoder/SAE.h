@@ -295,17 +295,11 @@ void SAE::train(
 	if(trainMode == GD)
 	{
 		gradientDescent(trainData,lambda,alpha,maxIter,beta,sp);
-#ifdef _IOSTREAM_
-		cout << "Batch Gradient Descent:" << endl;
-#endif
 	}
 	else if(trainMode == MINI_BATCH_SGD)
 	{
 		miniBatchSGD(trainData,lambda,alpha,maxIter,
 			*((int*)option),beta,sp);
-#ifdef _IOSTREAM_
-		cout << "Mini Batch Stochastic Gradient Descent:" << endl;
-#endif
 	}
 }
 
