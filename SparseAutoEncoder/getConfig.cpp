@@ -4,7 +4,7 @@ bool loadFileToBuf(char *fileName,char *buf,int bufSize)
 {
 	FILE *fp;
 	int size;
-	fopen_s(&fp,fileName,"rb");
+	fopen_s(&fp,fileName,"r");
 	if(fp)
 	{
 		fseek(fp,0,SEEK_END);
